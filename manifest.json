@@ -1,0 +1,34 @@
+{
+    "manifest_version": 2,
+    "name": "Youtube Playback Speed",
+    "version": "1.0.0",
+    "description": "Addon to allow automatic adjustment of youtube video playback speed.  Also allows adjustment beyond default options.",
+    "homepage_url": "https://github.com/RagingRoosevelt/YouTube-Playback-Speed",
+
+    "icons": {
+        "64": "icons/64.png"
+    },
+    
+    "content_scripts": [
+        {
+            "matches": ["*://*.youtube.com/*"],
+            "js": ["inject-playback-speed.js"]
+        }
+    ],
+
+    "browser_action": {
+        "default_icon": "icons/64.png",
+        "default_title": "Adjust Playback Speed",
+        "default_popup": "popup/adjust_speed.html"
+    },
+
+    "applications": {
+        "gecko": {
+            "id": "youtube-playback-speed@pureimaginat.io"
+        }
+    },
+
+    "permissions": [
+        "storage"
+    ]
+}
