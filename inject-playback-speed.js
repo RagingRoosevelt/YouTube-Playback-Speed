@@ -13,12 +13,15 @@ browser.storage.onChanged.addListener((settings) => {
 
 // Set the playback speed
 function setPlaybackSpeed() {
-    function onGot(val) {        
+    function onGot(val) {
         let videoElementList = document.getElementsByTagName("video")
         if (videoElementList.length > 0)
         {
             console.info(`Set playback speed.  It is ${val["playback_speed"]}.`)
-            videoElementList[0].playbackRate=val["playback_speed"] || 1
+            for(var i = 0; i < videoElementList.length; i++)
+            {
+                videoElementList[i].playbackRate=val["playback_speed"] || 1
+            }
         }
     }
 
