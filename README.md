@@ -4,5 +4,5 @@ Firefox extension to persistantly control playback speed.  Allows settings speed
 
 ## Changelog
 
-* v1.0.1 Updated to address issue when video isn't first in list, playback speed adjustment wouldn't apply
+* v1.1.0 Updated to address issue when video isn't first in list, playback speed adjustment wouldn't apply
 * v1.0.0 Initial version
